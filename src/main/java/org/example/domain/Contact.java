@@ -1,4 +1,4 @@
 package org.example.domain;
 
-public class Application {
+public class Contact {
 }
