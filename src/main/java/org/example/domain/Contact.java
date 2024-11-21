@@ -18,7 +18,7 @@ public class Contact {
         this.email = builder.email;
         this.phoneNumber = builder.phoneNumber;
         this.address = builder.address;
-      }
+    }
 
     //getters
     public String getName() {
@@ -67,21 +67,21 @@ public class Contact {
         private String address;
 
 
-    public Builder setName(String name) {
-        this.name = name;
-        return this;
-    }
+        public Builder setName(String name) {
+            this.name = name;
+            return this;
+        }
 
-    public Builder setEmail(String email) {
-        this.email = email;
-        return this;
-    }
+        public Builder setEmail(String email) {
+            this.email = email;
+            return this;
+        }
 
-    public Builder setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-        return this;
+        public Builder setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
+            return this;
 
-    }
+        }
         public Builder setAddress (String address){
             this.address = address;
             return this;
