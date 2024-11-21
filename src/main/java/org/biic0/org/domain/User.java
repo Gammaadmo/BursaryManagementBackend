@@ -40,6 +40,7 @@ public class User {
         private String email;
         private String password;
         private String mobile;
+        //private Contact contact;
 
         public Builder setUserId(String userId) {
             this.userId = userId;
