@@ -13,9 +13,9 @@ public class Admin {
         private String adminID;
         private String password;
         private String userName;
-       @OneToOne(cascade = CascadeType.ALL)
-       @JoinColumn(name = "user_id")
-        private User user;
+    //   @OneToOne(cascade = CascadeType.ALL)
+       //@JoinColumn(name = "user_id")
+       // private User user;
 
 
     public Admin() {
@@ -25,7 +25,7 @@ public class Admin {
             this.adminID = builder.adminID;
             this.password = builder.password;
             this.userName = builder.userName;
-            this.user  = builder.user;
+           // this.user  = builder.user;
 
         }
 
@@ -40,9 +40,9 @@ public class Admin {
         public String getUserName() {
             return userName;
         }
-        public User getUser() {
-        return user;
-        }
+       // public User getUser() {
+        //return user;
+        //}
 
         @Override
         public boolean equals(Object o) {
@@ -50,14 +50,14 @@ public class Admin {
             if (!(o instanceof Admin admin)) return false;
             return Objects.equals(adminID, admin.adminID) &&
                     Objects.equals(password, admin.password) &&
-                    Objects.equals(userName, admin.userName)&&
-                    Objects.equals(user, admin.user);
+                    Objects.equals(userName, admin.userName);
+                    //Objects.equals(user, admin.user);
         }
 
-        @Override
-        public int hashCode() {
-            return Objects.hash(adminID, password, userName,user);
-        }
+       // @Override
+       // public int hashCode() {
+       //     return Objects.hash(adminID, password, userName,user);
+        //}
 
         @Override
         public String toString() {
@@ -65,7 +65,7 @@ public class Admin {
                     "adminID='" + adminID + '\'' +
                     ", password='" + password + '\'' +
                     ", userName='" + userName + '\'' +
-                    ", user='" + user+ '\'' +
+                  //  ", user='" + user+ '\'' +
                     '}';
         }
 
@@ -73,7 +73,7 @@ public class Admin {
             private String adminID;
             private String password;
             private String userName;
-            private User user;
+          //  private User user;
 
             public Builder setAdminID(String adminID) {
                 this.adminID = adminID;
@@ -89,16 +89,16 @@ public class Admin {
                 this.userName = userName;
                 return this;
             }
-            public Builder setUser(User user) {
-                this.user = user;
-                return this;
-            }
+         //   public Builder setUser(User user) {
+           //     this.user = user;
+             //   return this;
+            //}
 
             public Builder copy(Admin admin) {
                 this.adminID = admin.adminID;
                 this.password = admin.password;
                 this.userName = admin.userName;
-                this.user = admin.user;
+             //   this.user = admin.user;
                 return this;
             }
 
