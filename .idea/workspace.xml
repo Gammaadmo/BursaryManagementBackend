@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cdf2d7a-0243-4fbc-9b1c-ac6859c4ea49" name="Changes" comment="Class name changes" />
+    <list default="true" id="8cdf2d7a-0243-4fbc-9b1c-ac6859c4ea49" name="Changes" comment="Class name changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/biic0/org/controller/BursaryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/biic0/org/domain/Bursar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/domain/Bursar.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731573323818</updated>
       <workItem from="1731573324904" duration="4523000" />
-      <workItem from="1732096909899" duration="1851000" />
+      <workItem from="1732096909899" duration="2609000" />
     </task>
     <task id="LOCAL-00001" summary="Hi">
       <option name="closed" value="true" />
