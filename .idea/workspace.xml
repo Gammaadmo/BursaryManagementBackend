@@ -5,44 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cdf2d7a-0243-4fbc-9b1c-ac6859c4ea49" name="Changes" comment="Class name changes">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/BursarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/controller/BursarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/BursaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/controller/BursaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/controller/ContactController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/domain/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Bursar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/domain/Bursar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Bursary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/domain/Bursary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/domain/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/domain/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/factory/AdminFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/factory/AdminFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/factory/BursarFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/factory/BursarFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/factory/BursaryFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/factory/BursaryFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/factory/ContactFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/factory/ContactFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/factory/StudentFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/factory/StudentFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/factory/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/factory/UserFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/AdminRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/repository/AdminRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/BursarRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/repository/BursarRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/BursaryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/repository/BursaryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/ContactRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/repository/ContactRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/repository/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/BursarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/BursarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/BursaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/BursaryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/ContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/ContactService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/IAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/IAdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/IBursarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/IBursarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/IBursaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/IBursaryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/IContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/IContactService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/IStudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731573323818</updated>
       <workItem from="1731573324904" duration="4523000" />
-      <workItem from="1732096909899" duration="1064000" />
+      <workItem from="1732096909899" duration="1770000" />
     </task>
     <task id="LOCAL-00001" summary="Hi">
       <option name="closed" value="true" />
