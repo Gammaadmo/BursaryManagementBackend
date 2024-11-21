@@ -18,8 +18,7 @@ public class Contact {
         this.email = builder.email;
         this.phoneNumber = builder.phoneNumber;
         this.address = builder.address;
-
-    }
+      }
 
     //getters
     public String getName() {
