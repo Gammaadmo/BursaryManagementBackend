@@ -1,13 +1,27 @@
 package org.biic0.org.domain;
 
+import jakarta.persistence.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
+
 import java.util.Objects;
+
+@Getter
+@Entity
+@EqualsAndHashCode
+@ToString
 
 public class Contact {
 
     // Member variables to store contact information
+    @Id
     private String email;
     private String phoneNumber;
     private String address;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "student_id")
+    private Student student;
 
     // Default constructor
     public Contact() {
