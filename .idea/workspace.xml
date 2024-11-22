@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="8cdf2d7a-0243-4fbc-9b1c-ac6859c4ea49" name="Changes" comment="Hi, Admin class">
       <change afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/IService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -14,6 +15,10 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/org/biic0/org/repository/AdminRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/repository/AdminRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/AdminService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/IAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/IAdminService.java" afterDir="false" />
+=======
+    <list default="true" id="8cdf2d7a-0243-4fbc-9b1c-ac6859c4ea49" name="Changes" comment="Class name changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +89,12 @@
       <option name="presentableId" value="Default" />
       <updated>1731573323818</updated>
       <workItem from="1731573324904" duration="4523000" />
+<<<<<<< Updated upstream
       <workItem from="1732096909899" duration="3301000" />
       <workItem from="1732188996767" duration="2872000" />
+=======
+      <workItem from="1732096909899" duration="4578000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="Hi">
       <option name="closed" value="true" />
