@@ -1,25 +1,36 @@
 package org.biic0.org.domain;
 
+import jakarta.persistence.*;
 import java.util.Objects;
 
+@Table(name = "contact")
+@Entity
 public class Contact {
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String contactID; // Added a unique identifier field for the Contact entity.
 
-    // Member variables to store contact information
     private String email;
     private String phoneNumber;
-    private String address;
 
-    // Default constructor
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address_id")
+    private Address address;
+
     public Contact() {
     }
 
     public Contact(Builder builder) {
+        this.contactID = builder.contactID;
         this.email = builder.email;
         this.phoneNumber = builder.phoneNumber;
         this.address = builder.address;
     }
 
-    //getters
+    // Getters
+    public String getContactID() {
+        return contactID;
+    }
 
     public String getEmail() {
         return email;
@@ -29,38 +40,49 @@ public class Contact {
         return phoneNumber;
     }
 
-    public String getAddress() {
+    public Address getAddress() {
         return address;
     }
 
+    // Equals and HashCode
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Contact contact = (Contact) o;
-        return  Objects.equals(email, contact.email) && Objects.equals(phoneNumber, contact.phoneNumber) && Objects.equals(address, contact.address);
+        return Objects.equals(contactID, contact.contactID) &&
+                Objects.equals(email, contact.email) &&
+                Objects.equals(phoneNumber, contact.phoneNumber) &&
+                Objects.equals(address, contact.address);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(email, phoneNumber, address);
+        return Objects.hash(contactID, email, phoneNumber, address);
     }
 
+    // ToString
     @Override
     public String toString() {
         return "Contact{" +
-                " email='" + email + '\'' +
+                "contactID='" + contactID + '\'' +
+                ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", address='" + address + '\'' +
+                ", address=" + address +
                 '}';
     }
 
+    // Builder Class
     public static class Builder {
+        private String contactID;
         private String email;
         private String phoneNumber;
-        private String address;
+        private Address address;
 
-
+        public Builder setContactID(String contactID) {
+            this.contactID = contactID;
+            return this;
+        }
 
         public Builder setEmail(String email) {
             this.email = email;
@@ -70,14 +92,15 @@ public class Contact {
         public Builder setPhoneNumber(String phoneNumber) {
             this.phoneNumber = phoneNumber;
             return this;
-
         }
-        public Builder setAddress (String address){
+
+        public Builder setAddress(Address address) {
             this.address = address;
             return this;
         }
 
         public Builder copy(Contact contact) {
+            this.contactID = contact.contactID;
             this.email = contact.email;
             this.phoneNumber = contact.phoneNumber;
             this.address = contact.address;
