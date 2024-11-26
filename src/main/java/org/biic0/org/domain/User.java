@@ -26,7 +26,7 @@ public class User {
     private String mobile;//contact
     //address
 
-    protected User() {}
+    public User() {}
 
     private User(Builder builder) {
         this.userId = builder.userId;
@@ -83,6 +83,12 @@ public class User {
                 ", password='" + password + '\'' +
                 ", mobile='" + mobile + '\'' +
                 '}';
+    }
+
+    public void setId(String user1) {
+    }
+
+    public void setName(String testUser) {
     }
 
     public static class Builder {

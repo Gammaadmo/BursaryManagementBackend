@@ -22,7 +22,7 @@ public class Bursar {
     @JoinColumn(name = "user_id")
     private User user;
 
-    protected Bursar() {}
+    public Bursar() {}
 
     private Bursar(Builder builder) {
         this.bursarId = builder.bursarId;
@@ -31,6 +31,15 @@ public class Bursar {
         this.contactNumber = builder.contactNumber;
         this.emailAddress = builder.emailAddress;
         this.user = builder.user;
+    }
+
+    public void setId(String b001) {
+    }
+
+    public void setName(String testBursar) {
+    }
+
+    public void setEmail(String mail) {
     }
 
     public static class Builder {
