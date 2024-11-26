@@ -34,8 +34,6 @@ public class ContactService implements IContactService {
         return contactRepository.save(contact);
     }
 
-
-
     @Transactional
     public void deleteByEmail(String email){
         contactRepository.deleteByEmail(email);
@@ -50,6 +48,8 @@ public class ContactService implements IContactService {
     public Contact getContactByEmail(String email) {
         return null;
     }
+
+
 
 
 }

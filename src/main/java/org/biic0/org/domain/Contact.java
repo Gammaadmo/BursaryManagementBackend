@@ -75,7 +75,6 @@ public class Contact {
         private String address;
 
 
-
         public Builder setEmail(String email) {
             this.email = email;
             return this;
@@ -86,6 +85,7 @@ public class Contact {
             return this;
 
         }
+
         public Builder setAddress (String address){
             this.address = address;
             return this;

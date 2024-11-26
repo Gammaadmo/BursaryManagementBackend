@@ -18,10 +18,10 @@ import java.util.List;
 
         private final ContactService contactService;
 
-        @Autowired
-        public ContactController(ContactService contactService) {
-            this.contactService = contactService;
-        }
+    @Autowired
+    public ContactController(ContactService contactService) {
+        this.contactService = contactService;
+    }
 
         @PostMapping("/create")
         public ResponseEntity<Contact> create(@RequestBody Contact contact) {
