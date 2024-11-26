@@ -5,8 +5,19 @@ import java.time.LocalTime;
 import java.util.Collection;
 import java.util.Map;
 import java.util.UUID;
+import java.util.regex.Pattern;
 
 public class Helper {
+
+    public static boolean isValidEmail(String email) {
+        String regexPattern = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
+        return Pattern.compile(regexPattern).matcher(email).matches();
+    }
+
+    public static boolean isNullorEmpty (String s){
+        return (s == null || s.equals("") || s.isEmpty() || s.equalsIgnoreCase("null"));
+    }
+
     public static boolean isNullOrEmpty(Object object){
         if(object == null)
             return true;

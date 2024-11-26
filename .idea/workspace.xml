@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
-    <list default="true" id="8cdf2d7a-0243-4fbc-9b1c-ac6859c4ea49" name="Changes" comment="Hi, Admin class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/IService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/biic0/org/domain/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/domain/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/biic0/org/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/biic0/org/factory/AdminFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/factory/AdminFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/biic0/org/repository/AdminRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/repository/AdminRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/IAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/biic0/org/service/IAdminService.java" afterDir="false" />
-=======
-    <list default="true" id="8cdf2d7a-0243-4fbc-9b1c-ac6859c4ea49" name="Changes" comment="Class name changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
->>>>>>> Stashed changes
-    </list>
+    <list default="true" id="8cdf2d7a-0243-4fbc-9b1c-ac6859c4ea49" name="Changes" comment="All my classes from domain to service" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -62,7 +47,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Zovuyo&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;sinothando&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -89,12 +74,8 @@
       <option name="presentableId" value="Default" />
       <updated>1731573323818</updated>
       <workItem from="1731573324904" duration="4523000" />
-<<<<<<< Updated upstream
       <workItem from="1732096909899" duration="3301000" />
       <workItem from="1732188996767" duration="2872000" />
-=======
-      <workItem from="1732096909899" duration="4578000" />
->>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="Hi">
       <option name="closed" value="true" />
@@ -136,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732097480704</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="All my classes from domain to service">
+      <option name="closed" value="true" />
+      <created>1732620163220</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732620163226</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +134,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hi" />
     <MESSAGE value="Class name changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Class name changes" />
+    <MESSAGE value="All my classes from domain to service" />
+    <option name="LAST_COMMIT_MESSAGE" value="All my classes from domain to service" />
   </component>
 </project>
