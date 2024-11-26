@@ -37,6 +37,7 @@ public class User {
         this.mobile = builder.mobile;
     }
 
+
     public String getUserId() {
         return userId;
     }
