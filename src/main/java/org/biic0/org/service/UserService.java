@@ -42,5 +42,5 @@ public class UserService implements IUserService {
     }
     public List<org.biic0.org.domain.User> findUserByEmail(String email) {
         return userRepository.findUserByEmail(email);
-    }
+    }//oyo
 }
