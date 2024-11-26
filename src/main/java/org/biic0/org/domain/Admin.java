@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import java.util.Objects;
 
 
-@Entity
 @Table(name = "admin")
 public class Admin {
 
@@ -19,7 +18,7 @@ public class Admin {
 
 
 
-    private Admin() {
+    public Admin() {
         }
 
         public Admin(Builder builder) {
@@ -55,10 +54,10 @@ public class Admin {
                     //Objects.equals(user, admin.user);
         }
 
-       // @Override
-       // public int hashCode() {
-       //     return Objects.hash(adminID, password, userName,user);
-        //}
+       @Override
+       public int hashCode() {
+           return Objects.hash(adminID, password, userName,user);
+        }
 
         @Override
         public String toString() {
@@ -70,7 +69,11 @@ public class Admin {
                     '}';
         }
 
-        public static class Builder {
+    public User getUser() {
+        return user;
+    }
+
+    public static class Builder {
             private String adminID;
             private String password;
             private String userName;

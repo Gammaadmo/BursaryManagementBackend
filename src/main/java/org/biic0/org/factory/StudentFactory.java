@@ -20,8 +20,8 @@ public class StudentFactory {
         }
         return new Student.Builder()
                 .setUser(user)
-               // .setContact(contact)
-                .setAddress(address)
+                //.setContact(contact)
+                //.setAddress(address)
                 .setDateOfBirth(dateOfBirth)
                 .setNationalId(nationalId)
                 .setUniversityName(universityName)

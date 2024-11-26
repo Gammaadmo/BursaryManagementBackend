@@ -5,7 +5,6 @@ import lombok.Getter;
 import java.util.Date;
 import java.util.Objects;
 
-@Entity
 public class Bursary {
 
     @Id
@@ -138,6 +137,15 @@ public class Bursary {
                 ", institutionName='" + institutionName + '\'' +
                 ", fundingOrganization='" + fundingOrganization + '\'' +
                 '}';
+    }
+
+    public void setId(long l) {
+    }
+
+    public void setBursaryId(String b001) {
+    }
+
+    public void setName(String testBursary) {
     }
 
     public static class BursaryBuilder {
