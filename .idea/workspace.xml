@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cdf2d7a-0243-4fbc-9b1c-ac6859c4ea49" name="Changes" comment="Hi, Admin class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8cdf2d7a-0243-4fbc-9b1c-ac6859c4ea49" name="Changes" comment="All my classes from domain to service" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -119,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732097480704</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="All my classes from domain to service">
+      <option name="closed" value="true" />
+      <created>1732620163220</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732620163226</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +134,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hi" />
     <MESSAGE value="Class name changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Class name changes" />
+    <MESSAGE value="All my classes from domain to service" />
+    <option name="LAST_COMMIT_MESSAGE" value="All my classes from domain to service" />
   </component>
 </project>
