@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.ToString;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 @Getter
 @EqualsAndHashCode
@@ -20,9 +21,9 @@ public class Student {
     @JoinColumn(name = "user_id")
     private User user;
 
-    //@OneToMany(cascade = CascadeType.ALL)
-    //@JoinColumn(name = "contact_id")
-    //private Contact contact;
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "contact_id")
+    private Contact contact;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id")
@@ -40,7 +41,7 @@ public class Student {
     private Student(Builder builder) {
         this.studentId = builder.studentId;
         this.user = builder.user;
-        //this.contact = builder.contact;
+        this.contact = builder.contact;
         this.address = builder.address;
         this.dateOfBirth = builder.dateOfBirth;
         this.nationalId = builder.nationalId;
@@ -57,9 +58,9 @@ public class Student {
         return user;
     }
 
-    //public Contact getContact() {
-    //    return contact;
-    //}
+    public Contact getContact() {
+        return contact;
+    }
 
     public LocalDate getDateOfBirth() {
         return dateOfBirth;
@@ -82,24 +83,24 @@ public class Student {
     }
 
 
-    //@Override
-    //public boolean equals(Object o) {
-    //    if (this == o) return true;
-    //    if (!(o instanceof Student student)) return false;
-    //    return getYearOfStudy() == student.getYearOfStudy() && Objects.equals(getStudentId(), student.getStudentId()) && Objects.equals(getUser(), student.getUser()) && Objects.equals(getContact(), student.getContact()) && Objects.equals(getAddress(), student.getAddress()) && Objects.equals(getDateOfBirth(), student.getDateOfBirth()) && Objects.equals(getNationalId(), student.getNationalId()) && Objects.equals(getUniversityName(), student.getUniversityName()) && Objects.equals(getStudentNumber(), student.getStudentNumber());
-    //}
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Student student)) return false;
+        return getYearOfStudy() == student.getYearOfStudy() && Objects.equals(getStudentId(), student.getStudentId()) && Objects.equals(getUser(), student.getUser()) && Objects.equals(getContact(), student.getContact()) && Objects.equals(getAddress(), student.getAddress()) && Objects.equals(getDateOfBirth(), student.getDateOfBirth()) && Objects.equals(getNationalId(), student.getNationalId()) && Objects.equals(getUniversityName(), student.getUniversityName()) && Objects.equals(getStudentNumber(), student.getStudentNumber());
+    }
 
-    //@Override
-    //public int hashCode() {
-      //  return Objects.hash(getStudentId(), getUser(), getContact(), getAddress(), getDateOfBirth(), getNationalId(), getUniversityName(), getStudentNumber(), getYearOfStudy());
-   // }
+    @Override
+    public int hashCode() {
+      return Objects.hash(getStudentId(), getUser(), getContact(), getAddress(), getDateOfBirth(), getNationalId(), getUniversityName(), getStudentNumber(), getYearOfStudy());
+    }
 
     @Override
     public String toString() {
         return "Student{" +
                 "studentId='" + studentId + '\'' +
                 ", user=" + user +
-               // ", contact=" + contact +
+                ", contact=" + contact +
                 ", address=" + address +
                 ", dateOfBirth=" + dateOfBirth +
                 ", nationalId='" + nationalId + '\'' +
@@ -112,7 +113,7 @@ public class Student {
     public static class Builder {
         private String studentId;
         private User user;
-        //private Contact contact;
+        private Contact contact;
         private Address address;
         private LocalDate dateOfBirth;
         private String nationalId;
@@ -128,10 +129,10 @@ public class Student {
             this.user = user;
             return this;
         }
-       // public Builder setContact(Contact contact) {
-       //     this.contact = contact;
-       //     return this;
-       // }
+        public Builder setContact(Contact contact) {
+            this.contact = contact;
+            return this;
+        }
        public Builder setAddress(Address address) {
            this.address = address;
            return this;
@@ -163,7 +164,7 @@ public class Student {
         public Builder copy(Student student) {
             this.studentId = student.studentId;
             this.user = student.user;
-            //this.contact = student.contact;
+            this.contact = student.contact;
             this.address = student.address;
             this.dateOfBirth = student.dateOfBirth;
             this.nationalId = student.nationalId;
