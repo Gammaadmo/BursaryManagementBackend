@@ -1,4 +1,4 @@
-package org.biic0.org.service;
+package ServiceTest;
 
 import org.biic0.org.domain.Bursar;
 import org.biic0.org.repository.BursarRepository;

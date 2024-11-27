@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface BursarRepository extends JpaRepository<Bursar, String> {
-    // Add custom queries if necessary
-    // For example:
-    // Optional<Bursar> findByName(String name);
+    // You can add custom queries if needed here
+    // Example: Find by registration number
+    Bursar findByRegistrationNumber(String registrationNumber);
 }
