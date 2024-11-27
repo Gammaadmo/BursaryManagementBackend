@@ -3,6 +3,7 @@ package ControllerTest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.biic0.org.controller.BursarController;
 import org.biic0.org.domain.Bursar;
+import org.biic0.org.domain.User;
 import org.biic0.org.service.IBursarService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -28,18 +29,22 @@ public class BursarControllerTest {
     @InjectMocks
     private BursarController bursarController;
 
-    private Bursar bursar;
+    private User someUserObject;
+    // Create a dummy Bursar object using the builder pattern
+    Bursar bursar = new Bursar.Builder()
+            .setBursarID("B001")
+            .setName("John Doe")
+            .setRegistrationNumber("12345")
+            .setDepartment("Finance")
+            .setUser(someUserObject) // Make sure you pass a User object here
+            .build();
+
 
     @BeforeEach
     void setUp() {
         // Set up the MockMvc instance
         mockMvc = MockMvcBuilders.standaloneSetup(bursarController).build();
 
-        // Create a dummy Bursar object for testing
-        bursar = new Bursar();
-        bursar.setId("B001");
-        bursar.setName("Test Bursar");
-        bursar.setEmail("test@bursar.com");
     }
 
     @Test
@@ -52,7 +57,7 @@ public class BursarControllerTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(new ObjectMapper().writeValueAsString(bursar)))
                 .andExpect(status().isCreated()) // Expect HTTP status 201 (Created)
-                .andExpect(jsonPath("$.id").value("B001"))
+                .andExpect(jsonPath("$.bursarID").value("B001"))
                 .andExpect(jsonPath("$.name").value("Test Bursar"))
                 .andExpect(jsonPath("$.email").value("test@bursar.com"));
 
@@ -68,7 +73,7 @@ public class BursarControllerTest {
         // Performing GET request to retrieve all bursars
         mockMvc.perform(get("/api/bursars"))
                 .andExpect(status().isOk()) // Expect HTTP status 200 (OK)
-                .andExpect(jsonPath("$[0].id").value("B001"))
+                .andExpect(jsonPath("$[0].bursarID").value("B001"))
                 .andExpect(jsonPath("$[0].name").value("Test Bursar"))
                 .andExpect(jsonPath("$[0].email").value("test@bursar.com"));
 
@@ -84,7 +89,7 @@ public class BursarControllerTest {
         // Performing GET request to retrieve a specific bursar by ID
         mockMvc.perform(get("/api/bursars/B001"))
                 .andExpect(status().isOk()) // Expect HTTP status 200 (OK)
-                .andExpect(jsonPath("$.id").value("B001"))
+                .andExpect(jsonPath("$.bursarID").value("B001"))
                 .andExpect(jsonPath("$.name").value("Test Bursar"))
                 .andExpect(jsonPath("$.email").value("test@bursar.com"));
 
@@ -102,7 +107,7 @@ public class BursarControllerTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(new ObjectMapper().writeValueAsString(bursar)))
                 .andExpect(status().isOk()) // Expect HTTP status 200 (OK)
-                .andExpect(jsonPath("$.id").value("B001"))
+                .andExpect(jsonPath("$.bursarID").value("B001"))
                 .andExpect(jsonPath("$.name").value("Test Bursar"))
                 .andExpect(jsonPath("$.email").value("test@bursar.com"));
 

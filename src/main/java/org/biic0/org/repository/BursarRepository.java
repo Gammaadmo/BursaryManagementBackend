@@ -4,9 +4,7 @@ import org.biic0.org.domain.Bursar;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
+@Repository // Ensure this annotation is added
 public interface BursarRepository extends JpaRepository<Bursar, String> {
-    // Add custom queries if necessary
-    // For example:
-    // Optional<Bursar> findByName(String name);
+    // You can add custom queries if needed here.
 }

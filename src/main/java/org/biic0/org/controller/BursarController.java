@@ -25,11 +25,9 @@ public class BursarController {
     public ResponseEntity<Bursar> createBursar(@RequestBody BursarRequest bursarRequest) {
         Bursar bursar = bursarService.create(
                 new Bursar.Builder()
-                        .setBursarId(bursarRequest.getBursarId())
+                        .setBursarID(bursarRequest.getBursarID())
                         .setName(bursarRequest.getName())
                         .setRegistrationNumber(bursarRequest.getRegistrationNumber())
-                        .setContactNumber(bursarRequest.getContactNumber())
-                        .setEmailAddress(bursarRequest.getEmailAddress())
                         .setUser(bursarRequest.getUser())
                         .build()
         );
@@ -42,22 +40,20 @@ public class BursarController {
         return ResponseEntity.ok(bursarList);
     }
 
-    @GetMapping("/{bursarId}")
-    public ResponseEntity<Bursar> getBursarById(@PathVariable String bursarId) {
-        Bursar bursar = bursarService.read(bursarId);
+    @GetMapping("/{bursarID}")
+    public ResponseEntity<Bursar> getBursarById(@PathVariable String bursarID) {
+        Bursar bursar = bursarService.read(bursarID);
         return bursar != null ? ResponseEntity.ok(bursar) : ResponseEntity.notFound().build();
     }
 
-    @PutMapping("/update/{bursarId}")
-    public ResponseEntity<Bursar> updateBursar(@PathVariable String bursarId, @RequestBody BursarRequest bursarRequest) {
-        Bursar existingBursar = bursarService.read(bursarId);
+    @PutMapping("/update/{bursarID}")
+    public ResponseEntity<Bursar> updateBursar(@PathVariable String bursarID, @RequestBody BursarRequest bursarRequest) {
+        Bursar existingBursar = bursarService.read(bursarID);
         if (existingBursar != null) {
             Bursar updatedBursar = new Bursar.Builder()
-                    .setBursarId(bursarId)
+                    .setBursarID(bursarID)
                     .setName(bursarRequest.getName())
                     .setRegistrationNumber(bursarRequest.getRegistrationNumber())
-                    .setContactNumber(bursarRequest.getContactNumber())
-                    .setEmailAddress(bursarRequest.getEmailAddress())
                     .setUser(bursarRequest.getUser())
                     .build();
             return ResponseEntity.ok(bursarService.update(updatedBursar));
@@ -65,30 +61,28 @@ public class BursarController {
         return ResponseEntity.notFound().build();
     }
 
-    @DeleteMapping("/delete/{bursarId}")
-    public ResponseEntity<Void> deleteBursar(@PathVariable String bursarId) {
-        Bursar bursar = bursarService.read(bursarId);
+    @DeleteMapping("/delete/{bursarID}")
+    public ResponseEntity<Void> deleteBursar(@PathVariable String bursarID) {
+        Bursar bursar = bursarService.read(bursarID);
         if (bursar != null) {
-            bursarService.delete(bursarId);
+            bursarService.delete(bursarID);
             return ResponseEntity.ok().build();
         }
         return ResponseEntity.notFound().build();
     }
 
     public static class BursarRequest {
-        private String bursarId;
+        private String bursarID;
         private String name;
         private String registrationNumber;
-        private String contactNumber;
-        private String emailAddress;
         private User user;
 
-        public String getBursarId() {
-            return bursarId;
+        public String getBursarID() {
+            return bursarID;
         }
 
-        public void setBursarId(String bursarId) {
-            this.bursarId = bursarId;
+        public void setBursarID(String bursarID) {
+            this.bursarID = bursarID;
         }
 
         public String getName() {
@@ -107,22 +101,6 @@ public class BursarController {
             this.registrationNumber = registrationNumber;
         }
 
-        public String getContactNumber() {
-            return contactNumber;
-        }
-
-        public void setContactNumber(String contactNumber) {
-            this.contactNumber = contactNumber;
-        }
-
-        public String getEmailAddress() {
-            return emailAddress;
-        }
-
-        public void setEmailAddress(String emailAddress) {
-            this.emailAddress = emailAddress;
-        }
-
         public User getUser() {
             return user;
         }
@@ -132,5 +110,3 @@ public class BursarController {
         }
     }
 }
-
-
