@@ -12,14 +12,14 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 @DataJpaTest
 public class BursarRepositoryTest {
 
-    @Autowired
+    //@Autowired
     public BursarRepository bursarRepository;
 
     private Bursar bursar;
 
     @BeforeEach
     public void setUp() {
-        bursar = new Bursar("123", "John Doe", "Finance");
+        bursar = new Bursar();
         bursarRepository.save(bursar);
     }
 
