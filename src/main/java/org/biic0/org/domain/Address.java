@@ -86,22 +86,28 @@ public class Address {
         private String zipCode;
 
         public void setAddressId(String addressId) {
+
             this.addressId = addressId;
         }
 
         public void setStreetName(String streetName) {
+
             this.streetName = streetName;
+
         }
 
         public void setSuburb(String suburb) {
+
             this.suburb = suburb;
         }
 
         public void setTown(String town) {
+
             this.town = town;
         }
 
         public void setZipCode(String zipCode) {
+
             this.zipCode = zipCode;
         }
 

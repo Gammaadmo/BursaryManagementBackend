@@ -1,9 +1,6 @@
 package org.biic0.org.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
@@ -21,10 +18,15 @@ public class User {
 
     private String firstName;
     private String lastName;
-    private String email;
     private String password;
-    private String mobile;//contact
-    //address
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "contact_id")
+    private Contact contact;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address_id")
+    private Address address;
 
     public User() {}
 
@@ -32,9 +34,9 @@ public class User {
         this.userId = builder.userId;
         this.firstName = builder.firstName;
         this.lastName = builder.lastName;
-        this.email = builder.email;
         this.password = builder.password;
-        this.mobile = builder.mobile;
+        this.contact = builder.contact;
+        this.address = builder.address;
     }
 
 
@@ -50,28 +52,29 @@ public class User {
         return lastName;
     }
 
-    public String getEmail() {
-        return email;
-    }
 
     public String getPassword() {
         return password;
     }
 
-    public String getMobile() {
-        return mobile;
+    public Contact getContact() {
+        return contact;
+    }
+
+    public Address getAddress() {
+        return address;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof User user)) return false;
-        return Objects.equals(getUserId(), user.getUserId()) && Objects.equals(getFirstName(), user.getFirstName()) && Objects.equals(getLastName(), user.getLastName()) && Objects.equals(getEmail(), user.getEmail()) && Objects.equals(getPassword(), user.getPassword()) && Objects.equals(getMobile(), user.getMobile());
+        return Objects.equals(getUserId(), user.getUserId()) && Objects.equals(getFirstName(), user.getFirstName()) && Objects.equals(getLastName(), user.getLastName()) && Objects.equals(getPassword(), user.getPassword()) && Objects.equals(getContact(), user.getContact()) && Objects.equals(getAddress(), user.getAddress());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getUserId(), getFirstName(), getLastName(), getEmail(), getPassword(), getMobile());
+        return Objects.hash(getUserId(), getFirstName(), getLastName(), getPassword(), getContact(), getAddress());
     }
 
     @Override
@@ -80,54 +83,54 @@ public class User {
                 "userId='" + userId + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", mobile='" + mobile + '\'' +
+                ", contact=" + contact +
+                ", address=" + address +
                 '}';
-    }
-
-    public void setId(String user1) {
-    }
-
-    public void setName(String testUser) {
     }
 
     public static class Builder {
         private String userId;
         private String firstName;
         private String lastName;
-        private String email;
         private String password;
-        private String mobile;
+        private Contact contact;
+        private Address address;
 
-        public Builder setUserId(String userId) {
+
+        public void setUserId(String userId) {
             this.userId = userId;
-            return this;
         }
 
-        public Builder setFirstName(String firstName) {
+        public void setFirstName(String firstName) {
             this.firstName = firstName;
-            return this;
         }
-        public Builder setLastName(String lastName) {
+
+        public void setLastName(String lastName) {
             this.lastName = lastName;
-            return this;
         }
 
-        public Builder setEmail(String email) {
-            this.email = email;
-            return this;
-        }
-
-        public Builder setPassword(String password) {
+        public void setPassword(String password) {
             this.password = password;
+        }
+
+        public void setContact(Contact contact) {
+            this.contact = contact;
+        }
+
+        public void setAddress(Address address) {
+            this.address = address;
+        }
+
+        public Builder copy(User user) {
+            this.userId = user.userId;
+            this.firstName = user.firstName;
+            this.lastName = user.lastName;
+            this.contact = user.contact;
+            this.address = user.address;
             return this;
         }
 
-        public Builder setMobile(String mobile) {
-            this.mobile = mobile;
-            return this;
-        }
         public User build() {
             return new User(this);
         }
